@@ -1,9 +1,9 @@
 public class CreditService {
-    public double calculate (int LoanCredit, int Months, double AnnualRate) {
+    public double calculate(int loanCredit, int months, double annualRate) {
 
-        double MonthlyRate = AnnualRate/12/100;
-        double CoefficientOfAnnuitant = MonthlyRate * Math.pow((MonthlyRate + 1), Months) / (Math.pow((MonthlyRate + 1), Months) - 1);
-        int payment = (int) (CoefficientOfAnnuitant * LoanCredit);
+        double monthlyRate = annualRate / 12 / 100;
+        double coefficientOfAnnuitant = monthlyRate * Math.pow((monthlyRate + 1), months) / (Math.pow((monthlyRate + 1), months) - 1);
+        int payment = (int) (coefficientOfAnnuitant * loanCredit);
 
         return payment;
 
